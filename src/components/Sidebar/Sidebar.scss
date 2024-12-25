@@ -6,21 +6,24 @@
     top: 0;
     z-index: 3;
     min-height: 500px;
-  
+
     .logo {
-      display: block;
-      padding: 8px 0;
+        display: flex; /* Use flexbox for better alignment */
+        flex-direction: column;
+        align-items: center; /* Center horizontally */
+        justify-content: center; /* Center vertically */
+        padding: 16px 0; /* Adjust padding for spacing */
   
-      img {
-        display: block;
-        margin: 8px auto;
-        width: 24px;
-        height: auto;
-  
-        &.sub-logo {
-          width: 50px;
+        img {
+            width: 40px; /* Logo size */
+            height: auto;
+            margin: 0; /* Remove margin to use flexbox centering */
+
+            &.sub-logo {
+                width: 80px; /* Sub-logo size */
+                margin-top: 8px; /* Add spacing between logo and sub-logo */
+            }
         }
-      }
     }
 
     nav {
@@ -29,7 +32,7 @@
         position: absolute;
         height: 210px;
         top: 50%;
-        margin-top: -120px;
+        transform: translateY(-50%); /* Use transform for proper centering */
         width: 100%;
 
         a {
@@ -70,7 +73,7 @@
                 transition: all 0.3s ease-out;
             }
 
-            &:first-child{
+            &:first-child {
                 &::after {
                     content: "HOME";
                 }
@@ -97,7 +100,7 @@
     }
 
     ul {
-        position : absolute;
+        position: absolute;
         bottom: 20px;
         width: 100%;
         display: block;
@@ -119,4 +122,4 @@
             }
         }
     }
-  }
+}
